@@ -21,7 +21,7 @@ NWR is defined as:
 
 `absolute neutrophil count / total white blood cell count`
 
-Age is capped at 80 years for prediction because age is top-coded at 80 years in the NHANES public-use data.
+Age is capped at 80 years for prediction because age is top-coded at 80 years in the NHANES public-
 
 ## Repository structure
 
@@ -36,10 +36,8 @@ Base6_HF_public/
 │   └── example_usage.R
 ├── metadata/
 │   └── Variable definitions and software/package information
-├
 └── README.md
-
-
+```
 ## Final model implementation
 The primary implementation file is:
 implementation/Base6_predict_1year.R
