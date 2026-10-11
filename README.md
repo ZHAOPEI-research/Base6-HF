@@ -25,20 +25,17 @@ Age is capped at 80 years for prediction because age is top-coded at 80 years in
 
 ## Repository structure
 
-```text
-Base6_HF_public/
-├── code/
-│   └── Analysis scripts used for model development,
-│       internal validation, external evaluation,
-│       recalibration, sensitivity analyses, and subgroup analyses
-├── implementation/
-│   ├── Base6_predict_1year.R
-│   └── example_usage.R
-├── metadata/
-│   └── Variable definitions and software/package information
-└── README.md
-```
+- `code/` — Analysis scripts used for model development, internal validation, external evaluation, recalibration, sensitivity analyses, and subgroup analyses
+- `implementation/`
+  - `Base6_predict_1year.R` — Frozen Base6 1-year risk implementation
+  - `example_usage.R` — Example using fictional predictor values
+- `metadata/`
+  - Variable definitions and software/package information
+- `RUN_ORDER.md` — Tested execution order for the public analysis workflow
+- `LICENSE` — MIT License
+
 ## Final model implementation
+
 The primary implementation file is:
 implementation/Base6_predict_1year.R
 It contains the frozen final Base6 specification, including:
@@ -96,7 +93,7 @@ These recalibrated models represent model updating and should not be interpreted
 NHANES data are publicly available from the National Center for Health Statistics.
 Individual-level data from the external hospital cohort are not included in this repository because of institutional and participant-privacy restrictions.
 Deidentified external-cohort data may be available from the corresponding author for legitimate research purposes, subject to institutional approval and applicable data-use requirements.
-Reproducibility
+## Reproducibility
 The public repository is intended to provide:
 - the final Base6 implementation
 - the main analysis workflow
