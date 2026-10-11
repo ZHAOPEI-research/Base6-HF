@@ -1,0 +1,38 @@
+# R workspace / history
+.Rhistory
+.RData
+.Ruserdata
+.Rproj.user/
+
+# macOS
+.DS_Store
+
+# Temporary files
+*.tmp
+*.temp
+~$*
+*.bak
+
+# Data files
+*.csv
+*.xlsx
+*.xls
+*.sav
+*.dta
+*.sas7bdat
+*.rds
+*.RDS
+*.rda
+*.RData
+
+# Except public metadata files
+!metadata/variable_dictionary.csv
+
+# External / private data directories
+data/
+private_data/
+external_data/
+raw_data/
+
+# Logs
+*.log

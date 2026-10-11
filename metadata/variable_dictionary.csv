@@ -1,0 +1,7 @@
+"predictor","model_name","nhanes_source","unit","functional_form","derivation"
+"Age","age","RIDAGEYR","years","Linear; capped at 80 years for prediction","Observed age; values above 80 years capped at 80 for prediction"
+"Body mass index","bmi","BMXBMI","kg/m^2","Linear","Measured body mass index"
+"Red cell distribution width","rdw","LBXRDW","%","Linear","Laboratory red cell distribution width"
+"Neutrophil-to-white-cell ratio","nwr","LBDNENO and LBXWBCSI","dimensionless","Natural cubic spline, 3 df","Absolute neutrophil count divided by total white blood cell count"
+"Estimated glomerular filtration rate","egfr","LBXSCR, RIDAGEYR, RIAGENDR","mL/min/1.73 m^2","Linear","CKD-EPI 2021 creatinine-only equation"
+"Medication count","med_count","RXDCOUNT / prescription medication records","count","Linear","Number of prescription medications"

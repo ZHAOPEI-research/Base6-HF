@@ -1,0 +1,43 @@
+Base6 public-code path/privacy audit
+Date: 2026-10-08
+
+Scope
+- 58 R scripts reviewed from the uploaded code folder.
+- Scientific/statistical analysis logic was not intentionally changed.
+- Changes were limited to path handling, restricted-data output locations,
+  and removal of user-specific absolute paths.
+
+Changes made
+1. Replaced hard-coded ~/Documents/R语言/NHANES working directories in
+   development/NHANES scripts with BASE6_ANALYSIS_DIR (default: current
+   working directory where appropriate).
+2. Configured external-cohort scripts to use BASE6_EXTERNAL_OUTPUT_DIR,
+   so restricted individual-level intermediate/output files are written
+   outside the public repository.
+3. Retained BASE6_EXTERNAL_DATA for the authorized deidentified hospital
+   source dataset.
+4. In 36_Chinese_Base6_external_validation.R, frozen NHANES model artifacts
+   are loaded from BASE6_ANALYSIS_DIR while external cohort intermediates
+   are loaded from BASE6_EXTERNAL_OUTPUT_DIR.
+5. Removed remaining user-specific absolute paths from scripts 47 and 48.
+6. Replaced literal hospital_data.xlsx references in explanatory/error text
+   in script 44 with generic authorized-external-dataset wording.
+7. Removed .DS_Store from the cleaned code folder.
+8. Added PATH_CONFIGURATION.md with environment-variable setup instructions.
+
+Environment variables used
+- BASE6_ANALYSIS_DIR
+- BASE6_EXTERNAL_DATA
+- BASE6_EXTERNAL_OUTPUT_DIR
+
+Privacy note
+External individual-level data and derived individual-level .RData/CSV files
+must not be committed to GitHub/Zenodo. Repository .gitignore should continue
+to exclude .RData/.rds/.xlsx/.xls and ordinary .csv files, while explicitly
+allowing metadata/variable_dictionary.csv.
+
+Validation limitation
+The scripts were inspected and path-transformed in this environment, but R
+was not available here to execute an R parser or rerun the full analysis.
+Before release, run a local parse/source smoke test in the user's R 4.6.0
+environment.
