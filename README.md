@@ -110,8 +110,8 @@ metadata/package_versions.txt
 Base6 is intended for research and evaluation purposes.
 The model should not be used for clinical decision-making without further independent multicenter validation and local assessment of calibration.
 ## Citation
-The associated manuscript is currently under preparation/submission.
-A permanent citation and Zenodo DOI will be added after the repository is archived.
+Software archive:
+ZHAOPEI-research. Base6 Heart Failure Mortality Prediction Model, version 1.0.1. Zenodo. https://doi.org/10.5281/zenodo.23295890
 
 ## License
 This repository is released under the MIT License. See `LICENSE` for details.

@@ -5,6 +5,7 @@ type: software
 authors:
   - name: "ZHAOPEI-research"
 version: "1.0.1"
+doi: "10.5281/zenodo.23295890"
 date-released: "2026-10-11"
 repository-code: "https://github.com/ZHAOPEI-research/Base6-HF"
 url: "https://github.com/ZHAOPEI-research/Base6-HF"
