@@ -36,11 +36,11 @@ Base6_HF_public/
 │   └── example_usage.R
 ├── metadata/
 │   └── Variable definitions and software/package information
-├── output_examples/
-│   └── Example outputs generated from fictional data
+├
 └── README.md
 
-Final model implementation
+
+## Final model implementation
 The primary implementation file is:
 implementation/Base6_predict_1year.R
 It contains the frozen final Base6 specification, including:
@@ -55,7 +55,7 @@ The final 1-year mortality risk is calculated as:
 with:
 - H0(1 year) = 0.05383994
 - LP_center = 4.415976
-Example use
+## Example use
 The file:
 implementation/example_usage.R
 contains a simple example using fictional predictor values.
@@ -63,23 +63,23 @@ From the repository root, run:
 source("implementation/example_usage.R")
 
 The example values are fictional and are provided solely to demonstrate model implementation.
-Input requirements
+## Input requirements
 Base6 requires all six predictors for individual risk estimation.
 Predictions should not be generated when required predictor values are missing or considered unreliable unless a prespecified and validated approach for handling missing inputs is available.
 Direct manual calculation of the spline component is not expected. The model is intended to be implemented using software or an electronic calculator.
-Development cohort
+## Development cohort
 The model was developed using NHANES 2011–2018 data linked to public-use mortality files.
 The final development cohort included:
 - 739 participants with heart failure
 - 237 deaths
 Multiple imputation, grouped penalized Cox regression, functional-form assessment, bootstrap internal validation, and global shrinkage were used during model development.
-External evaluation cohort
+## External evaluation cohort
 External evaluation was performed in an independent hospitalized heart-failure cohort from China.
 The common three-model external evaluation cohort included:
 - 346 participants
 - 47 deaths during approximately 1 year of follow-up
 Base6 was compared with MAGGIC and GWTG-HF.
-Recalibration
+## Recalibration
 Post hoc recalibration was performed in the external evaluation cohort.
 For Base6:
 z_Base6 = log[-log(1 - p_Base6)]
@@ -94,7 +94,7 @@ with:
   - alpha = 0.6918
   - beta = 1.0519
 These recalibrated models represent model updating and should not be interpreted as independently validated models.
-Data availability
+## Data availability
 NHANES data are publicly available from the National Center for Health Statistics.
 Individual-level data from the external hospital cohort are not included in this repository because of institutional and participant-privacy restrictions.
 Deidentified external-cohort data may be available from the corresponding author for legitimate research purposes, subject to institutional approval and applicable data-use requirements.
@@ -107,15 +107,16 @@ The public repository is intended to provide:
 - code for recalibration
 - sensitivity and subgroup analyses
 Some analyses depend on source datasets that are not redistributed in this repository.
-Software
+## Software
 Analyses were performed using R version 4.6.0.
 A complete list of relevant package versions will be provided in:
 metadata/package_versions.txt
-Intended use
+## Intended use
 Base6 is intended for research and evaluation purposes.
 The model should not be used for clinical decision-making without further independent multicenter validation and local assessment of calibration.
-Citation
+## Citation
 The associated manuscript is currently under preparation/submission.
 A permanent citation and Zenodo DOI will be added after the repository is archived.
-License
-License information will be added before public release.
+
+## License
+This repository is released under the MIT License. See `LICENSE` for details.
